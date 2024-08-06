@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Sus</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <h1>Formulário Sus</h1>
+
+    <fieldset>
+        <form>
+            <div>
+                <label>CPF<label class="asterisco">*</label></label>
+                <button class="botaoduvida" id="cpf" type="button">
+                    <img src="help.png" alt="" class="ajuda">
+                </button>
+                <input type="text" class="campo" required placeholder="Obrigatório">
+                <div id="cpfHelp"></div>
+            </div>
+
+            <div>
+                <label>CNS - Cartão Nacional de Saúde</label>
+                <button class="botaoduvida" id="cns" type="button">
+                    <img src="help.png" alt="" class="ajuda">
+                </button>
+                <input type="text" class="campo" id="cns">
+                <div id="cnsHelp"></div>
+            </div>
+
+            <div>
+                <label>SINAN</label>
+                <button class="botaoduvida" id="sinan" type="button">
+                    <img src="help.png" alt="" class="ajuda">
+                </button>
+                <input type="text" class="campo" id="sinan">
+                <div id="sinanHelp"></div>
+            </div>
+
+            <div>
+                <label>Prontuário</label>
+                <button class="botaoduvida" id="prontuario" type="button">
+                    <img src="help.png" alt="" class="ajuda">
+                </button>
+                <input type="text" class="campo" id="prontuario">
+                <div id="prontuarioHelp"></div>
+            </div>
+
+            <div class="escolha">
+                <button class="botaoduvida" id="ip" type="button">
+                    <img src="help.png" alt="" class="ajuda">
+                </button>
+                <label>Identificação Preferencial do Usuário<label class="asterisco">*</label>: </label>
+            
+                <select name="raca" required >
+                    <option value="">Selecione</option>
+                    <option value="amarela">Amarela</option>
+                    <option value="branca">Branca</option>
+                    <option value="preta">Preta</option>
+                    <option value="parda">Parda</option>
+                    <option value="indigena">Indígena</option>
+                    <option value="ignorada">Ignorada</option>
+                </select>
+                <div id="ipHelp"></div>
+            </div>
+
+            <div>
+                <label>Nome Completo do Usuário - Civil<label class="asterisco">*</label></label>
+                <button class="botaoduvida" id="usuariocivil" type="button">
+                    <img src="help.png" alt="" class="ajuda">
+                </button>
+                <br>
+                <input type="text" class="campo" placeholder="Obrigatório" required>
+                <div id="usuariocivilHelp"></div>
+            </div>
+
+            <div>
+                <label>Nome Social</label>
+                <button class="botaoduvida" id="nomesocial" type="button">
+                    <img src="help.png" alt="" class="ajuda">
+                </button>
+                <input type="text" class="campo">
+                <div id="nomesocialHelp"></div>
+            </div>
+
+            <div>
+                <label>Nome Completo da Mãe<label class="asterisco">*</label></label>
+                <button class="botaoduvida" id="nomemae" type="button">
+                    <img src="help.png" alt="" class="ajuda">
+                </button>
+                <input type="text" class="campo" placeholder="Obrigatório" required>
+                <div id="nomemaeHelp"></div>
+            </div>
+
+            <div>
+                <button class="botaoduvida" id="datanascimento" type="button">
+                    <img src="help.png" alt="" class="ajuda">
+                </button>
+                <label>Data de Nascimento<label class="asterisco">*</label></label>
+                <input type="date" id="datanascimento">
+                <br>
+                <br>
+                <div id="datanascimentoHelp"></div>
+
+                <button class="botaoduvida" id="racacor" type="button">
+                    <img src="help.png" alt="" class="ajuda">
+                </button>
+                
+                <label class="racacor">Raça / Cor<label class="asterisco">*</label></label>
+                <select name="raca" required class="camporacacor" id="racacor">
+                    <option value="">Selecione</option>
+                    <option value="amarela">Amarela</option>
+                    <option value="branca">Branca</option>
+                    <option value="preta">Preta</option>
+                    <option value="parda">Parda</option>
+                    <option value="indigena">Indígena</option>
+                    <option value="ignorada">Ignorada</option>
+                </select>
+                
+                <div id="racacorHelp"></div>
+            </div>
+
+            <div class="escolha">
+                <button class="botaoduvida" id="identidadeg" type="button">
+                    <img src="help.png" alt="" class="ajuda">
+                </button>
+                <label>Identidade de Gênero<label class="asterisco">*</label> </label>
+                <select name="identidadegenero" required id="identidadeg">
+                    <option value="">Selecione</option>
+                    <option value="mulher_cis">Mulher CIS</option>
+                    <option value="homem_cis">Homem CIS</option>
+                    <option value="mulher_trans">Mulher Trans</option>
+                    <option value="homem_trans">Homem Trans</option>
+                    <option value="travesti">Travesti</option>
+                    <option value="nao_binario">Não binário</option>
+                </select>
+                <div id="identidadegeneroHelp"></div>
+            </div>
+
+            <div class="escolha">
+                <button class="botaoduvida" id="sexoatribuidonascimento" type="button">
+                    <img src="help.png" alt="" class="ajuda">
+                </button>
+                <label>Sexo Atribuído ao Nascimento<label class="asterisco">*</label>: </label>
+                <input type="radio" name="sexonascimento" value="feminino">
+                <label>Feminino</label>
+                <input type="radio" name="sexonascimento" value="masculino">
+                <label>Masculino</label>
+                <input type="radio" name="sexonascimento" value="intersexo">
+                <label>Intersexo</label>
+                <div id="sexoatribuidonascimentoHelp"></div>
+            </div>
+
+            <div class="escolha">
+                <button class="botaoduvida" id="orientacaosexual" type="button">
+                    <img src="help.png" alt="" class="ajuda">
+                </button>
+                <label>Orientação Sexual<label class="asterisco">*</label>: </label>
+                <select name="orientacaosexual" id="orientacaosexual">
+                    <option value="">Selecione</option>
+                    <option value="heterossexual">Heterossexual</option>
+                    <option value="bissexual">Bissexual</option>
+                    <option value="homossexual">Homossexual/Gay/Lésbica</option>
+                </select>
+                <div id="orientacaosexualHelp"></div>
+            </div>
+
+            <div>
+                <label>Cidade de Nascimento (Cidade/UF)<label class="asterisco">*</label></label>
+                <button class="botaoduvida" id="cidadenascimento" type="button">
+                    <img src="help.png" alt="" class="ajuda">
+                </button>
+                <input type="text" class="campo" placeholder="Obrigatório" required>
+                <div id="cidadenascimentoHelp"></div>
+            </div>
+
+            <div>
+                <label>País de Nascimento<label class="asterisco">*</label></label>
+                <button class="botaoduvida" id="paisnascimento" type="button">
+                    <img src="help.png" alt="" class="ajuda">
+                </button>
+                <input type="text" class="campo" placeholder="Obrigatório" required>
+                <div id="paisnascimentoHelp"></div>
+            </div>
+
+            <div>
+                <label>Nacionalidade<label class="asterisco">*</label></label>
+                <button class="botaoduvida" id="nacionalidade" type="button">
+                    <img src="help.png" alt="" class="ajuda">
+                </button>
+                <input type="text" class="campo" placeholder="Obrigatório" required>
+                <div id="nacionalidadeHelp"></div>
+            </div>
+
+            <div class="escolha">
+                <button class="botaoduvida" id="situacaoestrangeiro" type="button">
+                    <img src="help.png" alt="" class="ajuda">
+                </button>
+                <label>Situação do Estrangeiro: </label>
+                <select>
+                    <option value="">Selecione</option>
+                    <option value="residente">Residente</option>
+                    <option value="habitante_fronteira">Habitante de Fronteira</option>
+                    <option value="situacaoestrangeiro">Não Residente</option>
+                </select>
+
+                <div id="situacaoestrangeiroHelp"></div> 
+            </div>
+
+            <div class="escolha">
+                <button class="botaoduvida" id="escolaridade" type="button">
+                    <img src="help.png" alt="" class="ajuda">
+                </button>
+                <label>Escolaridade<label class="asterisco">*</label></label>
+                <select name="escolaridade" id="escolaridade">
+                    <option value="">Selecione</option>
+                    <option value="nenhuma">Nenhuma/Sem Educação Formal</option>
+                    <option value="ignorado">Ignorado</option>
+                    <option value="1_a_3_anos">De 1 a 3 Anos</option>
+                    <option value="4_a_7_anos">De 4 a 7 Anos</option>
+                    <option value="8_a_11_anos">De 8 a 11 Anos</option>
+                    <option value="12_ou_mais_anos">De 12 Anos ou Mais</option>
+                </select>
+                <div id="escolaridadeHelp"></div>
+            </div>
+
+            <div class="escolha">
+                <button class="botaoduvida" id="pessoaemsituacaoderua" type="button">
+                    <img src="help.png" alt="" class="ajuda">
+                </button>
+                <label>Pessoa em Situação de Rua no Momento<label class="asterisco">*</label>: </label>
+                <input type="radio" name="situacao" value="sim">
+                <label>Sim</label>
+                <input type="radio" name="situacao" value="nao">
+                <label>Não</label>
+                <div id="pessoaemsituacaoderuaHelp"></div>
+                <br>
+                <button class="botaoduvida" id="pessoaprivadadeliberdade" type="button">
+                    <img src="help.png" alt="" class="ajuda">
+                </button>
+                <label>Pessoa Privada de Liberdade no Momento<label class="asterisco">*</label>:</label>
+                <input type="radio" name="privacao" value="sim">
+                <label>Sim</label>
+                <input type="radio" name="privacao" value="nao">
+                <label>Não</label>
+                <div id="pessoaprivadadeliberdadeHelp"></div>
+                <br>
+                <button class="botaoduvida" id="permitecontato" type="button">
+                    <img src="help.png" alt="" class="ajuda">
+                </button>
+                <label class="permitecontato">Permite Contato<label class="asterisco">*</label>:</label>
+                <input type="radio" name="permite" value="sim">
+                <label>Sim</label>
+                <input type="radio" name="permite" value="nao">
+                <label>Não</label>
+                <div id="permitecontatoHelp"></div>
+            </div>
+
+            <div class="escolha">
+                <button class="botaoduvida" id="tipocontato" type="button">
+                    <img src="help.png" alt="" class="ajuda">
+                </button>
+                <label>Tipo de Contato<label class="asterisco">*</label>: </label>
+                <input type="radio" name="tipoCtt" value="telefone">
+                <label>Telefone</label>
+                <input type="radio" name="tipoCtt" value="correio">
+                <label>Correio</label>
+                <input type="radio" name="tipoCtt" value="email">
+                <label>Email</label>
+                <input type="radio" name="tipoCtt" value="visita_domiciliar">
+                <label>Visita Domiciliar</label>
+                <input type="radio" name="tipoCtt" value="contato_terceiros">
+                <label>Contato com Terceiros</label>
+                <input type="radio" name="tipoCtt" value="outros">
+                <label>Outros</label>
+                <input type="text" id="tipoCttOutros">
+                <br>
+                <div id="tipocontatoHelp"></div>
+            </div>
+
+            <div>
+                <label>Endereço</label>
+                <button class="botaoduvida" id="endereco" type="button">
+                    <img src="help.png" alt="" class="ajuda">
+                </button>
+                <br>
+                <input type="text" class="campo" id="endereco">
+                <div id="enderecoHelp"></div>
+                <br>
+                <label>Bairro</label>
+                <button class="botaoduvida" id="bairro" type="button">
+                    <img src="help.png" alt="" class="ajuda">
+                </button>
+                <input type="text" class="campo" id="bairro">
+                <div id="bairroHelp"></div>
+                <label>Cep</label>
+                <button class="botaoduvida" id="cep" type="button">
+                    <img src="help.png" alt="" class="ajuda">
+                </button>
+                <input type="text" class="campo" id="cep">
+                <div id="cepHelp"></div>
+                <label>Cidade de Residência (Cidade/UF)<label class="asterisco">*</label></label>
+                <button class="botaoduvida" id="cidaderesidencia" type="button">
+                    <img src="help.png" alt="" class="ajuda">
+                </button>
+                <input type="text" class="campo" placeholder="Obrigatório" required id="cidaderesidencia">
+                <div id="cidaderesidenciaHelp"></div>
+                <label>E-mail</label>
+                <button class="botaoduvida" id="email" type="button">
+                    <img src="help.png" alt="" class="ajuda">
+                </button>
+                <input type="text" class="campo" id="email">
+                <div id="emailHelp"></div>
+            </div>
+
+            <div class="escolha">
+                <button class="botaoduvida" id="tipotelefone" type="button">
+                    <img src="help.png" alt="" class="ajuda">
+                </button>
+                <label>Tipo de telefone: </label>
+                <input type="radio" name="tipofone" value="residencial">
+                <label>Residencial</label>
+                <input type="radio" name="tipofone" value="comercial">
+                <label>Comercial</label>
+                <input type="radio" name="tipofone" value="celular">
+                <label>Celular</label>
+                <div id="tipotelefoneHelp"></div>
+            </div>
+
+            <div>
+                <label>Telefone para contato (DDD+Número)</label>
+                <input type="text" class="campo">
+                <br>
+                <br>
+                <button class="botaoduvida" id="observacoes" type="button">
+                    <img src="help.png" alt="" class="ajuda">
+                </button>
+                <label>Observações</label>
+                <textarea class="telefoneobservacao" id="observacoes"></textarea>
+                <div id="observacoesHelp"></div>
+            </div>
+
+            <div class="escolha">
+                <button class="botaoduvida" id="acompanhamentomedico" type="button">
+                    <img src="help.png" alt="" class="ajuda">
+                </button>
+                <label>Acompanhamento Médico no Momento:<label class="asterisco">*</label></label>
+                <input type="radio" name="acompanhamento" value="privado">
+                <label>Privado</label>
+                <input type="radio" name="acompanhamento" value="publico">
+                <label>Público</label>
+                <div id="acompanhamentomedicoHelp"></div>
+            </div>
+            
+
+            <div>
+                <h2>
+                    <button class="botaoduvida" id="pessoasautorizadas" type="button">
+                        <img src="help.png" alt="" class="ajuda">
+                    </button>
+                    Pessoas autorizadas a retirar o medicamento (máx. 3)
+                </h2>
+                <div id="pessoasautorizadasHelp"></div>
+                <label>Nome Completo da pessoa autorizada 1</label>
+                <br>
+                <input type="text" class="campo">
+                <br>
+                <label>Nome Completo da pessoa autorizada 2</label>
+                <br>
+                <input type="text" class="campo">
+                <br>
+                <label>Nome Completo da pessoa autorizada 3</label>
+                <br>
+                <input type="text" class="campo">
+            </div>
+
+            <div>
+                <label>Responsável pelo Preenchimento<label class="asterisco">*</label></label>
+                <br>
+                <input type="text" class="campo" placeholder="Obrigatório" required>
+            </div>
+
+            <div>
+                <label><i>Assinatura</i></label>
+                <br>
+                <input type="text" class="campo" placeholder="pessoa que preencheu o formulário">
+            </div>
+
+            <div class="enviar">
+                <button type="submit" class="botaoenviar">Enviar Formulário</button>
+            </div>
+
+        </form>
+    </fieldset>
+</body>
+
+</html>
